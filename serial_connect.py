@@ -7,7 +7,7 @@ ser = serial.Serial(
     port='/dev/ttyUSB0',
     baudrate=2400,
     parity=serial.PARITY_ODD,
-    stopbits=serial.STOPBITS_TWO,
+    stopbits=serial.STOPBITS_ONE,
     bytesize=serial.SEVENBITS
 )
 try:
