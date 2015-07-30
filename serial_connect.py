@@ -37,7 +37,7 @@ while 1 :
         # let's wait one second before reading output (let's give device time to answer)
         time.sleep(1)
         while ser.inWaiting() > 0:
-            out += binascii.unhexlify('%x'%ser.read(1))
+            out += binascii.unhexlify('%x'%ser.read())
 
         if out != '':
             print ">>" + out
