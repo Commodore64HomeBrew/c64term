@@ -1,5 +1,6 @@
 import time
 import serial
+import binascii
 
 # configure the serial connections (the parameters differs on the device you are connecting to)
 ser = serial.Serial(
@@ -36,7 +37,7 @@ while 1 :
         # let's wait one second before reading output (let's give device time to answer)
         time.sleep(1)
         while ser.inWaiting() > 0:
-            out += ser.read(1)
+            out += binascii.unhexlify('%x'%ser.read(1))
 
         if out != '':
             print ">>" + out
