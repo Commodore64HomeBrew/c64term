@@ -39,7 +39,7 @@ while 1 :
         while ser.inWaiting() > 0:
             #out += binascii.unhexlify('%x'%ser.read())
             b=ser.read()
-            print "%s versus %s"%(b,ord(b))
+            #print "%s versus %s"%(b,ord(b))
             out += b
         if out != '':
             print ">>" + out
